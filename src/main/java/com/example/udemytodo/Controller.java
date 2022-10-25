@@ -2,6 +2,7 @@ package com.example.udemytodo;
 
 import com.example.udemytodo.datamodel.TodoItem;
 import javafx.fxml.FXML;
+import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.SelectionMode;
 import javafx.scene.control.TextArea;
@@ -14,6 +15,8 @@ import java.util.List;
 public class Controller {
     @FXML
     private ListView<TodoItem> todoListView;
+    @FXML
+    private Label dueDateLabel;
     @FXML
     private TextArea todoTextArea;
     private List<TodoItem> todoItems;
@@ -52,10 +55,7 @@ public class Controller {
     @FXML
     public void handleClickListView() {
         TodoItem item = (TodoItem) todoListView.getSelectionModel().getSelectedItem();
-        StringBuilder sb = new StringBuilder(item.getFullDescription());
-        sb.append("\n\n\n\n");
-        sb.append("Due: ");
-        sb.append(item.getDeadline().toString());
-        todoTextArea.setText(sb.toString());
+        todoTextArea.setText(item.getFullDescription());
+        dueDateLabel.setText(item.getDeadline().toString());
     }
 }
