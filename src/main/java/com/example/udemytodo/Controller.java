@@ -1,6 +1,8 @@
 package com.example.udemytodo;
 
 import com.example.udemytodo.datamodel.TodoItem;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
@@ -44,13 +46,25 @@ public class Controller {
 
         todoItems = new ArrayList<TodoItem>();
         todoItems.add(0, item1);
-        todoItems.add(1, item1);
+        todoItems.add(1, item2);
         todoItems.add(2, item3);
         todoItems.add(3, item4);
         todoItems.add(4, item5);
 
+        todoListView.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<TodoItem>() {
+            @Override
+            public void changed(ObservableValue<? extends TodoItem> observableValue, TodoItem todoItem, TodoItem t1) {
+                if (t1 != null) {
+                    TodoItem item = todoListView.getSelectionModel().getSelectedItem();
+                    todoTextArea.setText(item.getFullDescription());
+                    dueDateLabel.setText(item.getDeadline().toString());
+                }
+            }
+        });
+
         todoListView.getItems().setAll(todoItems);
         todoListView.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
+        todoListView.getSelectionModel().selectFirst();
     }
     @FXML
     public void handleClickListView() {

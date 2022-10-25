@@ -12,20 +12,20 @@
     fx:controller="com.example.udemytodo.Controller">
 
     <left>
-        <ListView fx:id="todoListView" onMouseClicked="#handleClickListView">
+        <ListView fx:id="todoListView">
         </ListView>
     </left>
     <center>
-        <VBox>
-            <TextArea fx:id="todoTextArea">
+        <VBox style="-fx-background-color: skyblue">
+            <TextArea fx:id="todoTextArea" VBox.vgrow="ALWAYS">
             </TextArea>
             <HBox>
-                <Label text="Due: ">
+                <Label text="Due: " style="-fx-background-color: white">
                     <font>
                         <Font name="Times New Roman bold" size="16"/>
                     </font>
                 </Label>
-                <Label fx:id="dueDateLabel">
+                <Label fx:id="dueDateLabel" style="-fx-background-color: skyblue">
                     <font>
                         <Font name="Times New Roman bold" size="16"/>
                     </font>
