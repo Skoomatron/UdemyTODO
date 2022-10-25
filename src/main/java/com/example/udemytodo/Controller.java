@@ -13,7 +13,7 @@ import java.util.List;
 
 public class Controller {
     @FXML
-    private ListView todoListView;
+    private ListView<TodoItem> todoListView;
     @FXML
     private TextArea todoTextArea;
     private List<TodoItem> todoItems;
@@ -52,6 +52,10 @@ public class Controller {
     @FXML
     public void handleClickListView() {
         TodoItem item = (TodoItem) todoListView.getSelectionModel().getSelectedItem();
-        todoTextArea.setText(item.getFullDescription());
+        StringBuilder sb = new StringBuilder(item.getFullDescription());
+        sb.append("\n\n\n\n");
+        sb.append("Due: ");
+        sb.append(item.getDeadline().toString());
+        todoTextArea.setText(sb.toString());
     }
 }
