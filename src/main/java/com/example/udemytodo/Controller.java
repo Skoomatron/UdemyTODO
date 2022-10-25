@@ -4,6 +4,7 @@ import com.example.udemytodo.datamodel.TodoItem;
 import javafx.fxml.FXML;
 import javafx.scene.control.ListView;
 import javafx.scene.control.SelectionMode;
+import javafx.scene.control.TextArea;
 
 import java.time.LocalDate;
 import java.time.Month;
@@ -13,6 +14,8 @@ import java.util.List;
 public class Controller {
     @FXML
     private ListView todoListView;
+    @FXML
+    private TextArea todoTextArea;
     private List<TodoItem> todoItems;
     public void initialize() {
         TodoItem item1 = new TodoItem(
@@ -46,5 +49,9 @@ public class Controller {
         todoListView.getItems().setAll(todoItems);
         todoListView.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
     }
-
+    @FXML
+    public void handleClickListView() {
+        TodoItem item = (TodoItem) todoListView.getSelectionModel().getSelectedItem();
+        todoTextArea.setText(item.getFullDescription());
+    }
 }
