@@ -65,7 +65,7 @@ public class TodoData {
             Iterator<TodoItem> iter = todoItems.iterator();
             while (iter.hasNext()) {
                 TodoItem item = iter.next();
-                bw.write(String.format("%s\t%S\t%s", item.getShortDescription(), item.getFullDescription(), item.getDeadline().format(formatter)));
+                bw.write(String.format("%s\t%s\t%s", item.getShortDescription(), item.getFullDescription(), item.getDeadline().format(formatter)));
                 bw.newLine();
             }
         } finally {
