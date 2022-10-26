@@ -62,17 +62,11 @@ public class Controller {
         Optional<ButtonType> result = dialog.showAndWait();
 
         if (result.isPresent() && result.get() == ButtonType.OK) {
+            DialogController controller = fxmlLoader.getController();
+            controller.processResults();
             System.out.println("Okay Pressed");
         } else {
             System.out.println("Cancel Pressed");
         }
     }
-
-
-//    @FXML
-//    public void handleClickListView() {
-//        TodoItem item = (TodoItem) todoListView.getSelectionModel().getSelectedItem();
-//        todoTextArea.setText(item.getFullDescription());
-//        dueDateLabel.setText(item.getDeadline().toString());
-//    }
 }
