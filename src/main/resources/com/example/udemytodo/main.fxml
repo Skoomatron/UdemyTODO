@@ -8,6 +8,7 @@
 <BorderPane
     xmlns:fx="http://javafx.com/fxml"
     fx:controller="com.example.udemytodo.Controller">
+
     <top>
         <MenuBar>
             <Menu text="File">
@@ -24,6 +25,7 @@
         <ListView fx:id="todoListView">
         </ListView>
     </left>
+
     <center>
         <VBox style="-fx-background-color: skyblue">
             <TextArea fx:id="todoTextArea" VBox.vgrow="ALWAYS">
@@ -42,4 +44,5 @@
             </HBox>
         </VBox>
     </center>
+
 </BorderPane>
