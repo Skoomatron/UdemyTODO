@@ -11,7 +11,7 @@
         fx:controller="com.example.udemytodo.DialogController">
 
     <headerText>
-        We can type here.
+        Add a new TODO item.
     </headerText>
 
     <content>

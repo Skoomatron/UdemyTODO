@@ -6,6 +6,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <BorderPane
+    fx:id="mainBorderPane"
     xmlns:fx="http://javafx.com/fxml"
     fx:controller="com.example.udemytodo.Controller">
 
@@ -13,7 +14,7 @@
         <MenuBar>
             <Menu text="File">
                 <items>
-                    <MenuItem text="New TODO"/>
+                    <MenuItem text="New TODO" onAction="#showNewItemDialog"/>
                     <SeparatorMenuItem/>
                     <MenuItem text="Exit"/>
                 </items>
