@@ -21,6 +21,7 @@
                 GridPane.columnIndex="0"
                 GridPane.rowIndex="0"/>
             <TextField
+                fx:id="shortDescription"
                 GridPane.rowIndex="0"
                 GridPane.columnIndex="1"/>
             <Label
@@ -28,6 +29,7 @@
                 GridPane.columnIndex="0"
                 GridPane.rowIndex="1"/>
             <TextArea
+                fx:id="longDescription"
                 GridPane.rowIndex="1"
                 GridPane.columnIndex="1"/>
             <Label
@@ -35,6 +37,7 @@
                 GridPane.rowIndex="2"
                 GridPane.columnIndex="0"/>
             <DatePicker
+                fx:id="datePicker"
                 GridPane.rowIndex="2"
                 GridPane.columnIndex="1"/>
         </GridPane>
