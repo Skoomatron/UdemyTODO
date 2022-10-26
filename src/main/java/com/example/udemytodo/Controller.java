@@ -42,7 +42,7 @@ public class Controller {
                 LocalDate.of(2022, Month.DECEMBER, 15));
         TodoItem item5 = new TodoItem(
                 "Halloween Parties",
-                "Attend Mason Bar, Manse Street, and Scayola Halloween parties",
+                "Attend Mason Bar, and Manse Street Halloween parties",
                 LocalDate.of(2022, Month.OCTOBER, 30));
 
         todoItems = new ArrayList<TodoItem>();
@@ -68,10 +68,10 @@ public class Controller {
         todoListView.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
         todoListView.getSelectionModel().selectFirst();
     }
-    @FXML
-    public void handleClickListView() {
-        TodoItem item = (TodoItem) todoListView.getSelectionModel().getSelectedItem();
-        todoTextArea.setText(item.getFullDescription());
-        dueDateLabel.setText(item.getDeadline().toString());
-    }
+//    @FXML
+//    public void handleClickListView() {
+//        TodoItem item = (TodoItem) todoListView.getSelectionModel().getSelectedItem();
+//        todoTextArea.setText(item.getFullDescription());
+//        dueDateLabel.setText(item.getDeadline().toString());
+//    }
 }
