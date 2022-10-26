@@ -1,5 +1,6 @@
 package com.example.udemytodo;
 
+import com.example.udemytodo.datamodel.TodoData;
 import com.example.udemytodo.datamodel.TodoItem;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
@@ -51,6 +52,8 @@ public class Controller {
         todoItems.add(2, item3);
         todoItems.add(3, item4);
         todoItems.add(4, item5);
+
+        TodoData.getInstance().setTodoItems(todoItems);
 
         todoListView.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<TodoItem>() {
             @Override
