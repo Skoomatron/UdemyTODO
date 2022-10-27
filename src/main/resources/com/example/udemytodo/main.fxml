@@ -24,7 +24,10 @@
             </MenuBar>
             <ToolBar>
                 <HBox>
-                    <Button text="New" onAction="#showNewItemDialog">
+                    <Button onAction="#showNewItemDialog">
+                        <tooltip>
+                            <Tooltip text="Create New Todo"/>
+                        </tooltip>
                         <graphic>
                             <ImageView>
                                 <Image url="@/toolbarButtonGraphics/general/New24.gif"/>
