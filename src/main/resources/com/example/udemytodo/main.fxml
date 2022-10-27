@@ -29,7 +29,7 @@
 
     <center>
         <VBox style="-fx-background-color: skyblue">
-            <TextArea fx:id="todoTextArea" VBox.vgrow="ALWAYS">
+            <TextArea fx:id="todoTextArea" VBox.vgrow="ALWAYS" wrapText="true">
             </TextArea>
             <HBox>
                 <Label text="Due: " style="-fx-background-color: white">

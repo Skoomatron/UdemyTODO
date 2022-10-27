@@ -30,6 +30,7 @@
                 GridPane.rowIndex="1"/>
             <TextArea
                 fx:id="longDescription"
+                wrapText="true"
                 GridPane.rowIndex="1"
                 GridPane.columnIndex="1"/>
             <Label
