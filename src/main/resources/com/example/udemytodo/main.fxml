@@ -22,13 +22,13 @@
         </MenuBar>
     </top>
 
-    <left>
-        <ListView fx:id="todoListView">
+    <left >
+        <ListView fx:id="todoListView" >
         </ListView>
     </left>
 
     <center>
-        <VBox style="-fx-background-color: skyblue">
+        <VBox style="-fx-background-color: white">
             <TextArea fx:id="todoTextArea" VBox.vgrow="ALWAYS" wrapText="true">
             </TextArea>
             <HBox>
