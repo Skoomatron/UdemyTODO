@@ -34,6 +34,11 @@
                             </ImageView>
                         </graphic>
                     </Button>
+                    <ToggleButton text="Today's Agenda" fx:id="agendaToggle" onAction="#handleFilterButton">
+                        <tooltip>
+                            <Tooltip text="Activate Today's Agenda"/>
+                        </tooltip>
+                    </ToggleButton>
                 </HBox>
             </ToolBar>
         </VBox>

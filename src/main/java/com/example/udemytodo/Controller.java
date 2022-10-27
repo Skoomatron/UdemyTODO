@@ -25,6 +25,8 @@ import java.util.Optional;
 
 public class Controller {
     @FXML
+    private ToggleButton agendaToggle;
+    @FXML
     private ListView<TodoItem> todoListView;
     @FXML
     private Label dueDateLabel;
@@ -150,6 +152,14 @@ public class Controller {
 
         if (result.isPresent() && result.get() == ButtonType.OK) {
             TodoData.getInstance().deleteTodoItem(item);
+        }
+    }
+    @FXML
+    public void handleFilterButton() {
+        if (agendaToggle.isSelected()) {
+
+        } else {
+
         }
     }
 }
