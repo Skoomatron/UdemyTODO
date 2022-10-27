@@ -173,10 +173,20 @@ public class Controller {
     }
     @FXML
     public void handleFilterButton() {
+        TodoItem selectedItem = todoListView.getSelectionModel().getSelectedItem();
         if (agendaToggle.isSelected()) {
             filteredList.setPredicate(wantTodaysItems);
+            if (filteredList.isEmpty()) {
+                todoTextArea.clear();
+                dueDateLabel.setText("");
+            } else if (filteredList.contains(selectedItem)) {
+                todoListView.getSelectionModel().select(selectedItem);
+            } else {
+                todoListView.getSelectionModel().selectFirst();
+            }
         } else {
             filteredList.setPredicate(wantAllItems);
+            todoListView.getSelectionModel().select(selectedItem);
         }
     }
 }
